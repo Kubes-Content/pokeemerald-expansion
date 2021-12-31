@@ -146,6 +146,12 @@ void ResetMenuAndMonGlobals(void)
     ResetPokeblockScrollPositions();
 }
 
+
+// Kubes 12/30/21
+void AdditionalStartupSetup(void) {
+    FlagSet(FLAG_RUN_INSIDE_BY_DEFAULT);
+}
+
 void NewGameInitData(void)
 {
     if (gSaveFileStatus == SAVE_STATUS_EMPTY || gSaveFileStatus == SAVE_STATUS_CORRUPT)
@@ -204,6 +210,8 @@ void NewGameInitData(void)
     WipeTrainerNameRecords();
     ResetTrainerHillResults();
     ResetContestLinkResults();
+
+    AdditionalStartupSetup();
 }
 
 static void ResetMiniGamesRecords(void)

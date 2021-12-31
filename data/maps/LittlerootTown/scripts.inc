@@ -892,7 +892,8 @@ LittlerootTown_EventScript_Mom::
 
 LittlerootTown_EventScript_SetReceivedRunningShoes::
 	removeobject LOCALID_MOM
-	setflag FLAG_SYS_B_DASH
+	@ Running shoes no longer required to run... because reality // Kubes 12/30/2021
+	@setflag FLAG_SYS_HAVE_RUNNING_SHOES
 	setvar VAR_LITTLEROOT_TOWN_STATE, 4
 	release
 	end

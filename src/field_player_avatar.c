@@ -306,6 +306,12 @@ static bool8 (*const sPlayerAvatarSecretBaseMatSpin[])(struct Task *, struct Obj
     PlayerAvatar_SecretBaseMatSpinStep3,
 };
 
+// Kubes 12/30/2021
+
+static bool8 PlayerIsInside() {
+    return !gMapHeader.allowRunning;
+}
+
 // .text
 
 void MovementType_Player(struct Sprite *sprite)
@@ -635,8 +641,14 @@ static void PlayerNotOnBikeMoving(u8 direction, u16 heldKeys)
         return;
     }
 
-    if (!(gPlayerAvatar.flags & PLAYER_AVATAR_FLAG_UNDERWATER) && (heldKeys & B_BUTTON) && FlagGet(FLAG_SYS_B_DASH)
-     && IsRunningDisallowed(gObjectEvents[gPlayerAvatar.objectEventId].currentMetatileBehavior) == 0)
+    bool8 inputAttemptingWalk = (heldKeys & B_BUTTON); // B-button now walks outside, running is default // Kubes 12/30/2021
+    if (PlayerIsInside() && !FlagGet(FLAG_RUN_INSIDE_BY_DEFAULT)) { // B-button toggles whatever the default movement is inside // Kubes 12/30/2021
+        inputAttemptingWalk = !inputAttemptingWalk;
+    }
+
+    if (!(gPlayerAvatar.flags & PLAYER_AVATAR_FLAG_UNDERWATER) && !inputAttemptingWalk
+        // shoes no longer required     && FlagGet(FLAG_SYS_PLAYER_RUNNING_ENABLED) // Kubes 12/30/2021
+        && IsRunningDisallowed(gObjectEvents[gPlayerAvatar.objectEventId].currentMetatileBehavior) == 0)
     {
         PlayerRun(direction);
         gPlayerAvatar.flags |= PLAYER_AVATAR_FLAG_DASH;
@@ -2213,3 +2225,4 @@ static u8 TrySpinPlayerForWarp(struct ObjectEvent *object, s16 *delayTimer)
     *delayTimer = 0;
     return sSpinDirections[object->facingDirection];
 }
+
