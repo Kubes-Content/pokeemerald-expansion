@@ -642,9 +642,11 @@ static void PlayerNotOnBikeMoving(u8 direction, u16 heldKeys)
     }
 
     bool8 inputAttemptingWalk = (heldKeys & B_BUTTON); // B-button now walks outside, running is default // Kubes 12/30/2021
-    if (PlayerIsInside() && !FlagGet(FLAG_RUN_INSIDE_BY_DEFAULT)) { // B-button toggles whatever the default movement is inside // Kubes 12/30/2021
+    #ifndef FLAG_RUN_INSIDE_BY_DEFAULT
+    if (PlayerIsInside()) { // B-button toggles whatever the default movement is inside // Kubes 12/30/2021
         inputAttemptingWalk = !inputAttemptingWalk;
     }
+    #endif
 
     if (!(gPlayerAvatar.flags & PLAYER_AVATAR_FLAG_UNDERWATER) && !inputAttemptingWalk
         // shoes no longer required     && FlagGet(FLAG_SYS_PLAYER_RUNNING_ENABLED) // Kubes 12/30/2021

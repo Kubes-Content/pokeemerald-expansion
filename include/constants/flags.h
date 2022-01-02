@@ -41,7 +41,10 @@
 #define FLAG_TEMP_1F     (TEMP_FLAGS_START + 0x1F)
 #define TEMP_FLAGS_END   FLAG_TEMP_1F
 
-#define FLAG_RUN_INSIDE_BY_DEFAULT  0x20 // this doesn't need to be a flag... maybe it will be convenient // Kubes 12/30/2021
+// Kubes 1/1/2022
+#define FLAG_RUN_INSIDE_BY_DEFAULT
+
+#define FLAG_UNUSED_0x020    0x20 // Unused Flag
 #define FLAG_UNUSED_0x021    0x21 // Unused Flag
 #define FLAG_UNUSED_0x022    0x22 // Unused Flag
 #define FLAG_UNUSED_0x023    0x23 // Unused Flag
