@@ -642,7 +642,7 @@ static void PlayerNotOnBikeMoving(u8 direction, u16 heldKeys)
     }
 
     bool8 inputAttemptingWalk = (heldKeys & B_BUTTON); // B-button now walks outside, running is default // Kubes 12/30/2021
-    #ifndef FLAG_RUN_INSIDE_BY_DEFAULT
+    #ifndef FEATURE_RUN_INSIDE_BY_DEFAULT
     if (PlayerIsInside()) { // B-button toggles whatever the default movement is inside // Kubes 12/30/2021
         inputAttemptingWalk = !inputAttemptingWalk;
     }

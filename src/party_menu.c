@@ -4801,7 +4801,7 @@ static void Task_LearnedMove(u8 taskId)
     if (move[1] == 0)
     {
         AdjustFriendship(mon, FRIENDSHIP_EVENT_LEARN_TMHM);
-        #ifndef FLAG_REUSABLE_TMS
+        #ifndef FEATURE_REUSABLE_TMS
         if (item < ITEM_HM01_CUT) RemoveBagItem(item, 1);
         #endif
     }

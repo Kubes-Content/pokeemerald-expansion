@@ -7320,7 +7320,7 @@ const struct Item gItems[] =
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        #ifdef FLAG_REUSABLE_TMS
+        #ifdef FEATURE_REUSABLE_TMS
         .importance = 1,
         #endif
 },
@@ -7334,7 +7334,7 @@ const struct Item gItems[] =
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        #ifdef FLAG_REUSABLE_TMS
+        #ifdef FEATURE_REUSABLE_TMS
         .importance = 1,
         #endif
 },
@@ -7348,7 +7348,7 @@ const struct Item gItems[] =
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        #ifdef FLAG_REUSABLE_TMS
+        #ifdef FEATURE_REUSABLE_TMS
         .importance = 1,
         #endif
 },
@@ -7362,7 +7362,7 @@ const struct Item gItems[] =
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        #ifdef FLAG_REUSABLE_TMS
+        #ifdef FEATURE_REUSABLE_TMS
         .importance = 1,
         #endif
 },
@@ -7376,7 +7376,7 @@ const struct Item gItems[] =
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        #ifdef FLAG_REUSABLE_TMS
+        #ifdef FEATURE_REUSABLE_TMS
         .importance = 1,
         #endif
 },
@@ -7390,7 +7390,7 @@ const struct Item gItems[] =
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        #ifdef FLAG_REUSABLE_TMS
+        #ifdef FEATURE_REUSABLE_TMS
         .importance = 1,
         #endif
 },
@@ -7404,7 +7404,7 @@ const struct Item gItems[] =
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        #ifdef FLAG_REUSABLE_TMS
+        #ifdef FEATURE_REUSABLE_TMS
         .importance = 1,
         #endif
 },
@@ -7418,7 +7418,7 @@ const struct Item gItems[] =
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        #ifdef FLAG_REUSABLE_TMS
+        #ifdef FEATURE_REUSABLE_TMS
         .importance = 1,
         #endif
 },
@@ -7432,7 +7432,7 @@ const struct Item gItems[] =
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        #ifdef FLAG_REUSABLE_TMS
+        #ifdef FEATURE_REUSABLE_TMS
         .importance = 1,
         #endif
 },
@@ -7446,7 +7446,7 @@ const struct Item gItems[] =
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        #ifdef FLAG_REUSABLE_TMS
+        #ifdef FEATURE_REUSABLE_TMS
         .importance = 1,
         #endif
 },
@@ -7460,7 +7460,7 @@ const struct Item gItems[] =
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        #ifdef FLAG_REUSABLE_TMS
+        #ifdef FEATURE_REUSABLE_TMS
         .importance = 1,
         #endif
 },
@@ -7474,7 +7474,7 @@ const struct Item gItems[] =
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        #ifdef FLAG_REUSABLE_TMS
+        #ifdef FEATURE_REUSABLE_TMS
         .importance = 1,
         #endif
 },
@@ -7488,7 +7488,7 @@ const struct Item gItems[] =
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        #ifdef FLAG_REUSABLE_TMS
+        #ifdef FEATURE_REUSABLE_TMS
         .importance = 1,
         #endif
 },
@@ -7502,7 +7502,7 @@ const struct Item gItems[] =
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        #ifdef FLAG_REUSABLE_TMS
+        #ifdef FEATURE_REUSABLE_TMS
         .importance = 1,
         #endif
 },
@@ -7516,7 +7516,7 @@ const struct Item gItems[] =
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        #ifdef FLAG_REUSABLE_TMS
+        #ifdef FEATURE_REUSABLE_TMS
         .importance = 1,
         #endif
 },
@@ -7530,7 +7530,7 @@ const struct Item gItems[] =
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        #ifdef FLAG_REUSABLE_TMS
+        #ifdef FEATURE_REUSABLE_TMS
         .importance = 1,
         #endif
 },
@@ -7544,7 +7544,7 @@ const struct Item gItems[] =
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        #ifdef FLAG_REUSABLE_TMS
+        #ifdef FEATURE_REUSABLE_TMS
         .importance = 1,
         #endif
 },
@@ -7558,7 +7558,7 @@ const struct Item gItems[] =
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        #ifdef FLAG_REUSABLE_TMS
+        #ifdef FEATURE_REUSABLE_TMS
         .importance = 1,
         #endif
 },
@@ -7572,7 +7572,7 @@ const struct Item gItems[] =
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        #ifdef FLAG_REUSABLE_TMS
+        #ifdef FEATURE_REUSABLE_TMS
         .importance = 1,
         #endif
 },
@@ -7586,7 +7586,7 @@ const struct Item gItems[] =
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        #ifdef FLAG_REUSABLE_TMS
+        #ifdef FEATURE_REUSABLE_TMS
         .importance = 1,
         #endif
 },
@@ -7600,7 +7600,7 @@ const struct Item gItems[] =
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        #ifdef FLAG_REUSABLE_TMS
+        #ifdef FEATURE_REUSABLE_TMS
         .importance = 1,
         #endif
 },
@@ -7614,7 +7614,7 @@ const struct Item gItems[] =
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        #ifdef FLAG_REUSABLE_TMS
+        #ifdef FEATURE_REUSABLE_TMS
         .importance = 1,
         #endif
 },
@@ -7628,7 +7628,7 @@ const struct Item gItems[] =
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        #ifdef FLAG_REUSABLE_TMS
+        #ifdef FEATURE_REUSABLE_TMS
         .importance = 1,
         #endif
 },
@@ -7642,7 +7642,7 @@ const struct Item gItems[] =
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        #ifdef FLAG_REUSABLE_TMS
+        #ifdef FEATURE_REUSABLE_TMS
         .importance = 1,
         #endif
 },
@@ -7656,7 +7656,7 @@ const struct Item gItems[] =
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        #ifdef FLAG_REUSABLE_TMS
+        #ifdef FEATURE_REUSABLE_TMS
         .importance = 1,
         #endif
 },
@@ -7670,7 +7670,7 @@ const struct Item gItems[] =
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        #ifdef FLAG_REUSABLE_TMS
+        #ifdef FEATURE_REUSABLE_TMS
         .importance = 1,
         #endif
 },
@@ -7684,7 +7684,7 @@ const struct Item gItems[] =
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        #ifdef FLAG_REUSABLE_TMS
+        #ifdef FEATURE_REUSABLE_TMS
         .importance = 1,
         #endif
 },
@@ -7698,7 +7698,7 @@ const struct Item gItems[] =
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        #ifdef FLAG_REUSABLE_TMS
+        #ifdef FEATURE_REUSABLE_TMS
         .importance = 1,
         #endif
 },
@@ -7712,7 +7712,7 @@ const struct Item gItems[] =
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        #ifdef FLAG_REUSABLE_TMS
+        #ifdef FEATURE_REUSABLE_TMS
         .importance = 1,
         #endif
 },
@@ -7726,7 +7726,7 @@ const struct Item gItems[] =
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        #ifdef FLAG_REUSABLE_TMS
+        #ifdef FEATURE_REUSABLE_TMS
         .importance = 1,
         #endif
 },
@@ -7740,7 +7740,7 @@ const struct Item gItems[] =
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        #ifdef FLAG_REUSABLE_TMS
+        #ifdef FEATURE_REUSABLE_TMS
         .importance = 1,
         #endif
 },
@@ -7754,7 +7754,7 @@ const struct Item gItems[] =
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        #ifdef FLAG_REUSABLE_TMS
+        #ifdef FEATURE_REUSABLE_TMS
         .importance = 1,
         #endif
 },
@@ -7768,7 +7768,7 @@ const struct Item gItems[] =
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        #ifdef FLAG_REUSABLE_TMS
+        #ifdef FEATURE_REUSABLE_TMS
         .importance = 1,
         #endif
 },
@@ -7782,7 +7782,7 @@ const struct Item gItems[] =
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        #ifdef FLAG_REUSABLE_TMS
+        #ifdef FEATURE_REUSABLE_TMS
         .importance = 1,
         #endif
 },
@@ -7796,7 +7796,7 @@ const struct Item gItems[] =
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        #ifdef FLAG_REUSABLE_TMS
+        #ifdef FEATURE_REUSABLE_TMS
         .importance = 1,
         #endif
 },
@@ -7810,7 +7810,7 @@ const struct Item gItems[] =
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        #ifdef FLAG_REUSABLE_TMS
+        #ifdef FEATURE_REUSABLE_TMS
         .importance = 1,
         #endif
 },
@@ -7824,7 +7824,7 @@ const struct Item gItems[] =
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        #ifdef FLAG_REUSABLE_TMS
+        #ifdef FEATURE_REUSABLE_TMS
         .importance = 1,
         #endif
 },
@@ -7838,7 +7838,7 @@ const struct Item gItems[] =
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        #ifdef FLAG_REUSABLE_TMS
+        #ifdef FEATURE_REUSABLE_TMS
         .importance = 1,
         #endif
 },
@@ -7852,7 +7852,7 @@ const struct Item gItems[] =
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        #ifdef FLAG_REUSABLE_TMS
+        #ifdef FEATURE_REUSABLE_TMS
         .importance = 1,
         #endif
 },
@@ -7866,7 +7866,7 @@ const struct Item gItems[] =
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        #ifdef FLAG_REUSABLE_TMS
+        #ifdef FEATURE_REUSABLE_TMS
         .importance = 1,
         #endif
 },
@@ -7880,7 +7880,7 @@ const struct Item gItems[] =
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        #ifdef FLAG_REUSABLE_TMS
+        #ifdef FEATURE_REUSABLE_TMS
         .importance = 1,
         #endif
 },
@@ -7894,7 +7894,7 @@ const struct Item gItems[] =
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        #ifdef FLAG_REUSABLE_TMS
+        #ifdef FEATURE_REUSABLE_TMS
         .importance = 1,
         #endif
 },
@@ -7908,7 +7908,7 @@ const struct Item gItems[] =
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        #ifdef FLAG_REUSABLE_TMS
+        #ifdef FEATURE_REUSABLE_TMS
         .importance = 1,
         #endif
 },
@@ -7922,7 +7922,7 @@ const struct Item gItems[] =
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        #ifdef FLAG_REUSABLE_TMS
+        #ifdef FEATURE_REUSABLE_TMS
         .importance = 1,
         #endif
 },
@@ -7936,7 +7936,7 @@ const struct Item gItems[] =
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        #ifdef FLAG_REUSABLE_TMS
+        #ifdef FEATURE_REUSABLE_TMS
         .importance = 1,
         #endif
 },
@@ -7950,7 +7950,7 @@ const struct Item gItems[] =
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        #ifdef FLAG_REUSABLE_TMS
+        #ifdef FEATURE_REUSABLE_TMS
         .importance = 1,
         #endif
 },
@@ -7964,7 +7964,7 @@ const struct Item gItems[] =
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        #ifdef FLAG_REUSABLE_TMS
+        #ifdef FEATURE_REUSABLE_TMS
         .importance = 1,
         #endif
 },
@@ -7978,7 +7978,7 @@ const struct Item gItems[] =
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        #ifdef FLAG_REUSABLE_TMS
+        #ifdef FEATURE_REUSABLE_TMS
         .importance = 1,
         #endif
 },
@@ -7992,7 +7992,7 @@ const struct Item gItems[] =
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        #ifdef FLAG_REUSABLE_TMS
+        #ifdef FEATURE_REUSABLE_TMS
         .importance = 1,
         #endif
 },
@@ -8006,7 +8006,7 @@ const struct Item gItems[] =
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        #ifdef FLAG_REUSABLE_TMS
+        #ifdef FEATURE_REUSABLE_TMS
         .importance = 1,
         #endif
 },
@@ -8020,7 +8020,7 @@ const struct Item gItems[] =
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        #ifdef FLAG_REUSABLE_TMS
+        #ifdef FEATURE_REUSABLE_TMS
         .importance = 1,
         #endif
 },
@@ -8034,7 +8034,7 @@ const struct Item gItems[] =
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        #ifdef FLAG_REUSABLE_TMS
+        #ifdef FEATURE_REUSABLE_TMS
         .importance = 1,
         #endif
 },
@@ -8048,7 +8048,7 @@ const struct Item gItems[] =
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        #ifdef FLAG_REUSABLE_TMS
+        #ifdef FEATURE_REUSABLE_TMS
         .importance = 1,
         #endif
 },
@@ -8062,7 +8062,7 @@ const struct Item gItems[] =
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        #ifdef FLAG_REUSABLE_TMS
+        #ifdef FEATURE_REUSABLE_TMS
         .importance = 1,
         #endif
 },
@@ -8076,7 +8076,7 @@ const struct Item gItems[] =
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        #ifdef FLAG_REUSABLE_TMS
+        #ifdef FEATURE_REUSABLE_TMS
         .importance = 1,
         #endif
 },
@@ -8090,7 +8090,7 @@ const struct Item gItems[] =
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        #ifdef FLAG_REUSABLE_TMS
+        #ifdef FEATURE_REUSABLE_TMS
         .importance = 1,
         #endif
 },
@@ -8104,7 +8104,7 @@ const struct Item gItems[] =
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        #ifdef FLAG_REUSABLE_TMS
+        #ifdef FEATURE_REUSABLE_TMS
         .importance = 1,
         #endif
 },
@@ -8118,7 +8118,7 @@ const struct Item gItems[] =
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        #ifdef FLAG_REUSABLE_TMS
+        #ifdef FEATURE_REUSABLE_TMS
         .importance = 1,
         #endif
 },
@@ -8132,7 +8132,7 @@ const struct Item gItems[] =
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        #ifdef FLAG_REUSABLE_TMS
+        #ifdef FEATURE_REUSABLE_TMS
         .importance = 1,
         #endif
 },
@@ -8146,7 +8146,7 @@ const struct Item gItems[] =
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        #ifdef FLAG_REUSABLE_TMS
+        #ifdef FEATURE_REUSABLE_TMS
         .importance = 1,
         #endif
 },
@@ -8160,7 +8160,7 @@ const struct Item gItems[] =
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        #ifdef FLAG_REUSABLE_TMS
+        #ifdef FEATURE_REUSABLE_TMS
         .importance = 1,
         #endif
 },
@@ -8174,7 +8174,7 @@ const struct Item gItems[] =
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        #ifdef FLAG_REUSABLE_TMS
+        #ifdef FEATURE_REUSABLE_TMS
         .importance = 1,
         #endif
 },
@@ -8188,7 +8188,7 @@ const struct Item gItems[] =
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        #ifdef FLAG_REUSABLE_TMS
+        #ifdef FEATURE_REUSABLE_TMS
         .importance = 1,
         #endif
 },
@@ -8202,7 +8202,7 @@ const struct Item gItems[] =
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        #ifdef FLAG_REUSABLE_TMS
+        #ifdef FEATURE_REUSABLE_TMS
         .importance = 1,
         #endif
 },
@@ -8216,7 +8216,7 @@ const struct Item gItems[] =
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        #ifdef FLAG_REUSABLE_TMS
+        #ifdef FEATURE_REUSABLE_TMS
         .importance = 1,
         #endif
 },
@@ -8230,7 +8230,7 @@ const struct Item gItems[] =
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        #ifdef FLAG_REUSABLE_TMS
+        #ifdef FEATURE_REUSABLE_TMS
         .importance = 1,
         #endif
 },
@@ -8244,7 +8244,7 @@ const struct Item gItems[] =
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        #ifdef FLAG_REUSABLE_TMS
+        #ifdef FEATURE_REUSABLE_TMS
         .importance = 1,
         #endif
 },
@@ -8258,7 +8258,7 @@ const struct Item gItems[] =
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        #ifdef FLAG_REUSABLE_TMS
+        #ifdef FEATURE_REUSABLE_TMS
         .importance = 1,
         #endif
 },
@@ -8272,7 +8272,7 @@ const struct Item gItems[] =
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        #ifdef FLAG_REUSABLE_TMS
+        #ifdef FEATURE_REUSABLE_TMS
         .importance = 1,
         #endif
 },
@@ -8286,7 +8286,7 @@ const struct Item gItems[] =
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        #ifdef FLAG_REUSABLE_TMS
+        #ifdef FEATURE_REUSABLE_TMS
         .importance = 1,
         #endif
 },
@@ -8300,7 +8300,7 @@ const struct Item gItems[] =
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        #ifdef FLAG_REUSABLE_TMS
+        #ifdef FEATURE_REUSABLE_TMS
         .importance = 1,
         #endif
 },
@@ -8314,7 +8314,7 @@ const struct Item gItems[] =
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        #ifdef FLAG_REUSABLE_TMS
+        #ifdef FEATURE_REUSABLE_TMS
         .importance = 1,
         #endif
 },
@@ -8328,7 +8328,7 @@ const struct Item gItems[] =
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        #ifdef FLAG_REUSABLE_TMS
+        #ifdef FEATURE_REUSABLE_TMS
         .importance = 1,
         #endif
 },
@@ -8342,7 +8342,7 @@ const struct Item gItems[] =
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        #ifdef FLAG_REUSABLE_TMS
+        #ifdef FEATURE_REUSABLE_TMS
         .importance = 1,
         #endif
 },
@@ -8356,7 +8356,7 @@ const struct Item gItems[] =
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        #ifdef FLAG_REUSABLE_TMS
+        #ifdef FEATURE_REUSABLE_TMS
         .importance = 1,
         #endif
 },
@@ -8370,7 +8370,7 @@ const struct Item gItems[] =
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        #ifdef FLAG_REUSABLE_TMS
+        #ifdef FEATURE_REUSABLE_TMS
         .importance = 1,
         #endif
 },
@@ -8384,7 +8384,7 @@ const struct Item gItems[] =
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        #ifdef FLAG_REUSABLE_TMS
+        #ifdef FEATURE_REUSABLE_TMS
         .importance = 1,
         #endif
 },
@@ -8398,7 +8398,7 @@ const struct Item gItems[] =
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        #ifdef FLAG_REUSABLE_TMS
+        #ifdef FEATURE_REUSABLE_TMS
         .importance = 1,
         #endif
 },
@@ -8412,7 +8412,7 @@ const struct Item gItems[] =
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        #ifdef FLAG_REUSABLE_TMS
+        #ifdef FEATURE_REUSABLE_TMS
         .importance = 1,
         #endif
 },
@@ -8426,7 +8426,7 @@ const struct Item gItems[] =
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        #ifdef FLAG_REUSABLE_TMS
+        #ifdef FEATURE_REUSABLE_TMS
         .importance = 1,
         #endif
 },
@@ -8440,7 +8440,7 @@ const struct Item gItems[] =
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        #ifdef FLAG_REUSABLE_TMS
+        #ifdef FEATURE_REUSABLE_TMS
         .importance = 1,
         #endif
 },
@@ -8454,7 +8454,7 @@ const struct Item gItems[] =
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        #ifdef FLAG_REUSABLE_TMS
+        #ifdef FEATURE_REUSABLE_TMS
         .importance = 1,
         #endif
 },
@@ -8468,7 +8468,7 @@ const struct Item gItems[] =
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        #ifdef FLAG_REUSABLE_TMS
+        #ifdef FEATURE_REUSABLE_TMS
         .importance = 1,
         #endif
 },
@@ -8482,7 +8482,7 @@ const struct Item gItems[] =
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        #ifdef FLAG_REUSABLE_TMS
+        #ifdef FEATURE_REUSABLE_TMS
         .importance = 1,
         #endif
 },
@@ -8496,7 +8496,7 @@ const struct Item gItems[] =
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        #ifdef FLAG_REUSABLE_TMS
+        #ifdef FEATURE_REUSABLE_TMS
         .importance = 1,
         #endif
 },
@@ -8510,7 +8510,7 @@ const struct Item gItems[] =
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        #ifdef FLAG_REUSABLE_TMS
+        #ifdef FEATURE_REUSABLE_TMS
         .importance = 1,
         #endif
 },
@@ -8524,7 +8524,7 @@ const struct Item gItems[] =
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        #ifdef FLAG_REUSABLE_TMS
+        #ifdef FEATURE_REUSABLE_TMS
         .importance = 1,
         #endif
 },
@@ -8538,7 +8538,7 @@ const struct Item gItems[] =
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        #ifdef FLAG_REUSABLE_TMS
+        #ifdef FEATURE_REUSABLE_TMS
         .importance = 1,
         #endif
 },
@@ -8552,7 +8552,7 @@ const struct Item gItems[] =
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        #ifdef FLAG_REUSABLE_TMS
+        #ifdef FEATURE_REUSABLE_TMS
         .importance = 1,
         #endif
 },
@@ -8566,7 +8566,7 @@ const struct Item gItems[] =
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        #ifdef FLAG_REUSABLE_TMS
+        #ifdef FEATURE_REUSABLE_TMS
         .importance = 1,
         #endif
 },
@@ -8580,7 +8580,7 @@ const struct Item gItems[] =
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        #ifdef FLAG_REUSABLE_TMS
+        #ifdef FEATURE_REUSABLE_TMS
         .importance = 1,
         #endif
 },
@@ -8594,7 +8594,7 @@ const struct Item gItems[] =
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        #ifdef FLAG_REUSABLE_TMS
+        #ifdef FEATURE_REUSABLE_TMS
         .importance = 1,
         #endif
 },
@@ -8608,7 +8608,7 @@ const struct Item gItems[] =
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        #ifdef FLAG_REUSABLE_TMS
+        #ifdef FEATURE_REUSABLE_TMS
         .importance = 1,
         #endif
 },
@@ -8622,7 +8622,7 @@ const struct Item gItems[] =
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        #ifdef FLAG_REUSABLE_TMS
+        #ifdef FEATURE_REUSABLE_TMS
         .importance = 1,
         #endif
 },
@@ -8636,7 +8636,7 @@ const struct Item gItems[] =
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        #ifdef FLAG_REUSABLE_TMS
+        #ifdef FEATURE_REUSABLE_TMS
         .importance = 1,
         #endif
 },
@@ -8650,7 +8650,7 @@ const struct Item gItems[] =
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        #ifdef FLAG_REUSABLE_TMS
+        #ifdef FEATURE_REUSABLE_TMS
         .importance = 1,
         #endif
 },
@@ -8664,7 +8664,7 @@ const struct Item gItems[] =
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        #ifdef FLAG_REUSABLE_TMS
+        #ifdef FEATURE_REUSABLE_TMS
         .importance = 1,
         #endif
 },
@@ -8678,7 +8678,7 @@ const struct Item gItems[] =
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        #ifdef FLAG_REUSABLE_TMS
+        #ifdef FEATURE_REUSABLE_TMS
         .importance = 1,
         #endif
 },
@@ -8692,7 +8692,7 @@ const struct Item gItems[] =
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        #ifdef FLAG_REUSABLE_TMS
+        #ifdef FEATURE_REUSABLE_TMS
         .importance = 1,
         #endif
 },
@@ -8706,7 +8706,7 @@ const struct Item gItems[] =
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        #ifdef FLAG_REUSABLE_TMS
+        #ifdef FEATURE_REUSABLE_TMS
         .importance = 1,
         #endif
     },
@@ -9135,7 +9135,7 @@ const struct Item gItems[] =
         .pocket = POCKET_KEY_ITEMS,
         .type = ITEM_USE_FIELD,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
-        #ifdef FLAG_REUSABLE_TMS
+        #ifdef FEATURE_REUSABLE_TMS
         .importance = 1,
         #endif
 },

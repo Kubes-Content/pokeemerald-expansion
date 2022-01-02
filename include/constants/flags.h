@@ -42,8 +42,8 @@
 #define TEMP_FLAGS_END   FLAG_TEMP_1F
 
 // Kubes 1/1/2022
-//#define FLAG_RUN_INSIDE_BY_DEFAULT
-#define FLAG_REUSABLE_TMS
+//#define FEATURE_RUN_INSIDE_BY_DEFAULT
+#define FEATURE_REUSABLE_TMS // will be relevant for nuzlocke configs
 
 #define FLAG_UNUSED_0x020    0x20 // Unused Flag
 #define FLAG_UNUSED_0x021    0x21 // Unused Flag
