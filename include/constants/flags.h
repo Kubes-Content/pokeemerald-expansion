@@ -43,6 +43,7 @@
 
 // Kubes 1/1/2022
 #define FLAG_RUN_INSIDE_BY_DEFAULT
+#define FLAG_REUSABLE_TMS
 
 #define FLAG_UNUSED_0x020    0x20 // Unused Flag
 #define FLAG_UNUSED_0x021    0x21 // Unused Flag
