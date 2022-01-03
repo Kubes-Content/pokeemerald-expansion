@@ -971,8 +971,14 @@ u32 CanThrowBall(void)
 
 static const u8 sText_CantThrowPokeBall_TwoMons[] = _("Cannot throw a ball!\nThere are two Pokémon out there!\p");
 static const u8 sText_CantThrowPokeBall_SemiInvulnerable[] = _("Cannot throw a ball!\nThere's no Pokémon in sight!\p");
+static const u8 sText_BallsCannotBeUsed[] = _("Poké Balls cannot be used\nright now!\p");
 void ItemUseInBattle_PokeBall(u8 taskId)
 {
+    if (FlagGet(FLAG_DISABLE_CATCHING_IN_BATTLE)) {
+        DisplayItemMessage(taskId, 1, sText_BallsCannotBeUsed, BagMenu_InitListsMenu);
+        return;
+    }
+
     switch (CanThrowBall())
     {
     case 0: // usable

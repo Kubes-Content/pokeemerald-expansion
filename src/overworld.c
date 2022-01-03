@@ -408,6 +408,7 @@ static void Overworld_ResetStateAfterWhiteOut(void)
     FlagClear(FLAG_SYS_USE_STRENGTH);
     FlagClear(FLAG_SYS_USE_FLASH);
     FlagClear(FLAG_DISABLE_BAG_IN_BATTLE);
+    FlagClear(FLAG_DISABLE_CATCHING_IN_BATTLE);
     #if VAR_TERRAIN != 0
         VarSet(VAR_TERRAIN, 0);
     #endif
