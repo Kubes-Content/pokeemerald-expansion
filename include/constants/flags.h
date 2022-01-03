@@ -45,7 +45,7 @@
 #define FEATURE_REUSABLE_TMS // will be relevant for nuzlocke configs
 //#define FEATURE_NO_BAG_IN_BATTLE // TODO 1/2/2022
 
-#define FLAG_DISABLE_BAG     0x20
+#define FLAG_DISABLE_BAG_IN_BATTLE 0x20
 #define FLAG_UNUSED_0x021    0x21 // Unused Flag
 #define FLAG_UNUSED_0x022    0x22 // Unused Flag
 #define FLAG_UNUSED_0x023    0x23 // Unused Flag
