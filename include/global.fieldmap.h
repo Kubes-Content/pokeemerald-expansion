@@ -334,5 +334,6 @@ extern u8 gSelectedObjectEvent;
 extern struct MapHeader gMapHeader;
 extern struct PlayerAvatar gPlayerAvatar;
 extern struct Camera gCamera;
+extern struct GameplayModifiersData gGameplayModifiers;
 
 #endif // GUARD_GLOBAL_FIELDMAP_H

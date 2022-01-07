@@ -183,6 +183,8 @@ void SaveObjectEvents(void)
 
     for (i = 0; i < OBJECT_EVENTS_COUNT; i++)
         gSaveBlock1Ptr->objectEvents[i] = gObjectEvents[i];
+
+    gSaveBlock1Ptr->modifiersData = gGameplayModifiers;
 }
 
 void LoadObjectEvents(void)
