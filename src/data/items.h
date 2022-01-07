@@ -1,3 +1,5 @@
+#include "features.h"
+
 const struct Item gItems[] =
 {
     [ITEM_NONE] =
