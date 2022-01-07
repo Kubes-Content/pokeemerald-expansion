@@ -29,35 +29,35 @@
 
 #define NUM_HOF_SECTORS 2
 
-#define SAVE_STATUS_EMPTY    0
-#define SAVE_STATUS_OK       1
-#define SAVE_STATUS_CORRUPT  2
-#define SAVE_STATUS_NO_FLASH 4
-#define SAVE_STATUS_ERROR    0xFF
+enum SaveStatus {
+    SAVE_STATUS_EMPTY = 0,
+    SAVE_STATUS_OK = 1,
+    SAVE_STATUS_CORRUPT = 2,
+    SAVE_STATUS_NO_FLASH = 4,
+    SAVE_STATUS_ERROR = 0xFF,
+} __attribute__((__packed__));
 
 // Special sector id value for certain save functions to
 // indicate that no specific sector should be used.
 #define FULL_SAVE_SLOT 0xFFFF
 
-// SetDamagedSectorBits states
-enum
+enum SetDamagedSectorBitsState
 {
     ENABLE,
     DISABLE,
     CHECK // unused
-};
+} __attribute__((__packed__));
 
 // Do save types
-enum
+enum DoSaveType
 {
     SAVE_NORMAL,
     SAVE_LINK, // Link / Battle Frontier
-    //EREADER_SAVE, // deprecated in Emerald
     SAVE_LINK2, // unknown 2nd link save
     SAVE_HALL_OF_FAME,
     SAVE_OVERWRITE_DIFFERENT_FILE,
     SAVE_HALL_OF_FAME_ERASE_BEFORE // unused
-};
+} __attribute__((__packed__));
 
 // A save sector location holds a pointer to the data for a particular sector
 // and the size of that data. Size cannot be greater than SECTOR_DATA_SIZE.
@@ -103,7 +103,7 @@ bool8 LinkFullSave_ReplaceLastSector(void);
 bool8 LinkFullSave_SetLastSectorSecurity(void);
 bool8 WriteSaveBlock2(void);
 bool8 WriteSaveBlock1Sector(void);
-u8 LoadGameSave(u8 saveType);
+u8 LoadGameSave(const enum DoSaveType saveType);
 u16 GetSaveBlocksPointersBaseOffset(void);
 u32 TryReadSpecialSaveSector(u8 sector, u8* dst);
 u32 TryWriteSpecialSaveSector(u8 sector, u8* src);

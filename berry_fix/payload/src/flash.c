@@ -12,13 +12,13 @@ struct SaveBlockChunk
     u16 size;
 };
 
-u8 WriteSaveBlockChunks(u16 a0, const struct SaveBlockChunk * a1);
-u8 WriteSingleChunk(u16 a0, const struct SaveBlockChunk * a1);
-u8 TryWriteSector(u8, u8 *);
-u8 EraseCurrentChunk(u16 a0, const struct SaveBlockChunk * a1);
-u8 TryReadAllSaveSectorsCurrentSlot(u16 a0, const struct SaveBlockChunk * a1);
-u8 ReadAllSaveSectorsCurrentSlot(u16 a0, const struct SaveBlockChunk * a1);
-u8 GetSaveValidStatus(const struct SaveBlockChunk * a1);
+enum SaveStatus WriteSaveBlockChunks(u16 a0, const struct SaveBlockChunk * a1);
+enum SaveStatus WriteSingleChunk(u16 a0, const struct SaveBlockChunk * a1);
+enum SaveStatus TryWriteSector(u8, u8 *);
+enum SaveStatus EraseCurrentChunk(u16 a0, const struct SaveBlockChunk * a1);
+enum SaveStatus TryReadAllSaveSectorsCurrentSlot(u16 a0, const struct SaveBlockChunk * a1);
+enum SaveStatus ReadAllSaveSectorsCurrentSlot(u16 a0, const struct SaveBlockChunk * a1);
+enum SaveStatus GetSaveValidStatus(const struct SaveBlockChunk * a1);
 u32 DoReadFlashWholeSection(u8 a0, struct SaveSector * a1);
 u16 CalculateChecksum(const void *, u16);
 
@@ -213,7 +213,7 @@ bool32 SetSectorDamagedStatus(u8 op, u8 sectorNum)
     return retVal;
 }
 
-u8 WriteSaveBlockChunks(u16 chunkId, const struct SaveBlockChunk *chunks)
+enum SaveStatus WriteSaveBlockChunks(u16 chunkId, const struct SaveBlockChunk *chunks)
 {
     u32 retVal;
     u16 i;
@@ -248,7 +248,7 @@ u8 WriteSaveBlockChunks(u16 chunkId, const struct SaveBlockChunk *chunks)
     return retVal;
 }
 
-u8 WriteSingleChunk(u16 chunkId, const struct SaveBlockChunk * chunks)
+enum SaveStatus WriteSingleChunk(u16 chunkId, const struct SaveBlockChunk * chunks)
 {
     u16 i;
     u16 sectorNum;
@@ -278,7 +278,7 @@ u8 WriteSingleChunk(u16 chunkId, const struct SaveBlockChunk * chunks)
     return TryWriteSector(sectorNum, gFastSaveSection->data);
 }
 
-u8 HandleWriteSectorNBytes(u8 sectorNum, u8 *data, u16 size)
+enum SaveStatus HandleWriteSectorNBytes(u8 sectorNum, u8 *data, u16 size)
 {
     u16 i;
     struct SaveSector *section = eSaveSection;
@@ -294,7 +294,7 @@ u8 HandleWriteSectorNBytes(u8 sectorNum, u8 *data, u16 size)
     return TryWriteSector(sectorNum, section->data);
 }
 
-u8 TryWriteSector(u8 sectorNum, u8 *data)
+enum SaveStatus TryWriteSector(u8 sectorNum, u8 *data)
 {
     if (ProgramFlashSectorAndVerify(sectorNum, data) != 0) // is damaged?
     {
@@ -355,7 +355,7 @@ u8 WriteSingleChunkAndIncrement(u16 a1, const struct SaveBlockChunk * chunk)
     return retVal;
 }
 
-u8 ErasePreviousChunk(u16 a1, const struct SaveBlockChunk *chunk)
+enum SaveStatus ErasePreviousChunk(u16 a1, const struct SaveBlockChunk *chunk)
 {
     u8 retVal = SAVE_STATUS_OK;
 
@@ -370,7 +370,7 @@ u8 ErasePreviousChunk(u16 a1, const struct SaveBlockChunk *chunk)
     return retVal;
 }
 
-u8 EraseCurrentChunk(u16 chunkId, const struct SaveBlockChunk *chunks)
+enum SaveStatus EraseCurrentChunk(u16 chunkId, const struct SaveBlockChunk *chunks)
 {
     u16 i;
     u16 sector;
@@ -446,7 +446,7 @@ u8 EraseCurrentChunk(u16 chunkId, const struct SaveBlockChunk *chunks)
     }
 }
 
-u8 WriteSomeFlashByteToPrevSector(u16 a1, const struct SaveBlockChunk *chunk)
+enum SaveStatus WriteSomeFlashByteToPrevSector(u16 a1, const struct SaveBlockChunk *chunk)
 {
     u16 sector;
 
@@ -471,7 +471,7 @@ u8 WriteSomeFlashByteToPrevSector(u16 a1, const struct SaveBlockChunk *chunk)
     }
 }
 
-u8 WriteSomeFlashByte0x25ToPrevSector(u16 a1, const struct SaveBlockChunk *chunk)
+enum SaveStatus WriteSomeFlashByte0x25ToPrevSector(u16 a1, const struct SaveBlockChunk *chunk)
 {
     u16 sector;
 
@@ -494,7 +494,7 @@ u8 WriteSomeFlashByte0x25ToPrevSector(u16 a1, const struct SaveBlockChunk *chunk
     }
 }
 
-u8 TryReadAllSaveSectorsCurrentSlot(u16 a1, const struct SaveBlockChunk *chunk)
+enum SaveStatus TryReadAllSaveSectorsCurrentSlot(u16 a1, const struct SaveBlockChunk *chunk)
 {
     u8 retVal;
     gFastSaveSection = eSaveSection;
@@ -511,7 +511,7 @@ u8 TryReadAllSaveSectorsCurrentSlot(u16 a1, const struct SaveBlockChunk *chunk)
     return retVal;
 }
 
-u8 ReadAllSaveSectorsCurrentSlot(u16 a1, const struct SaveBlockChunk *chunks)
+enum SaveStatus ReadAllSaveSectorsCurrentSlot(u16 a1, const struct SaveBlockChunk *chunks)
 {
     u16 i;
     u16 checksum;
@@ -537,15 +537,15 @@ u8 ReadAllSaveSectorsCurrentSlot(u16 a1, const struct SaveBlockChunk *chunks)
     return 1;
 }
 
-u8 GetSaveValidStatus(const struct SaveBlockChunk *chunks)
+enum SaveStatus GetSaveValidStatus(const struct SaveBlockChunk *chunks)
 {
     u16 sector;
     bool8 signatureValid;
     u16 checksum;
     u32 slot1saveCounter = 0;
     u32 slot2saveCounter = 0;
-    u8 slot1Status;
-    u8 slot2Status;
+    enum SaveStatus slot1Status;
+    enum SaveStatus slot2Status;
     u32 validSectors;
     const u32 ALL_SECTORS = (1 << NUM_SECTORS_PER_SAVE_SLOT) - 1;  // bitmask of all saveblock sectors
 
@@ -659,7 +659,7 @@ u8 GetSaveValidStatus(const struct SaveBlockChunk *chunks)
     return 2;
 }
 
-u8 ReadSomeUnknownSectorAndVerify(u8 sector, u8 *data, u16 size)
+enum SaveStatus ReadSomeUnknownSectorAndVerify(u8 sector, u8 *data, u16 size)
 {
     u16 i;
     struct SaveSector *section = eSaveSection;

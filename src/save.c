@@ -109,7 +109,7 @@ void Save_ResetSaveCounters(void)
     gDamagedSaveSectors = 0;
 }
 
-static bool32 SetDamagedSectorBits(u8 op, u8 sectorId)
+static bool32 SetDamagedSectorBits(enum SetDamagedSectorBitsState op, u8 sectorId)
 {
     bool32 retVal = FALSE;
 
@@ -699,6 +699,11 @@ static void UpdateSaveAddresses(void)
     }
 }
 
+/* void EraseHallOfFame(void) {
+    for (u8 i = SECTOR_ID_HOF_1; i < SECTORS_COUNT; i++)
+        EraseFlashSector(i);
+} */
+
 u8 HandleSavingData(u8 saveType)
 {
     u8 i;
@@ -863,7 +868,7 @@ bool8 WriteSaveBlock1Sector(void)
     return finished;
 }
 
-u8 LoadGameSave(u8 saveType)
+u8 LoadGameSave(const enum DoSaveType saveType)
 {
     u8 status;
 

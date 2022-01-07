@@ -112,22 +112,22 @@ static bool8 BattlePyramidRetireCallback(void);
 static bool8 HandleStartMenuInput(void);
 
 // Save dialog callbacks
-static u8 SaveConfirmSaveCallback(void);
-static u8 SaveYesNoCallback(void);
-static u8 SaveConfirmInputCallback(void);
-static u8 SaveFileExistsCallback(void);
-static u8 SaveConfirmOverwriteDefaultNoCallback(void);
-static u8 SaveConfirmOverwriteCallback(void);
-static u8 SaveOverwriteInputCallback(void);
-static u8 SaveSavingMessageCallback(void);
-static u8 SaveDoSaveCallback(void);
-static u8 SaveSuccessCallback(void);
-static u8 SaveReturnSuccessCallback(void);
-static u8 SaveErrorCallback(void);
-static u8 SaveReturnErrorCallback(void);
-static u8 BattlePyramidConfirmRetireCallback(void);
-static u8 BattlePyramidRetireYesNoCallback(void);
-static u8 BattlePyramidRetireInputCallback(void);
+static enum SaveStatus SaveConfirmSaveCallback(void);
+static enum SaveStatus SaveYesNoCallback(void);
+static enum SaveStatus SaveConfirmInputCallback(void);
+static enum SaveStatus SaveFileExistsCallback(void);
+static enum SaveStatus SaveConfirmOverwriteDefaultNoCallback(void);
+static enum SaveStatus SaveConfirmOverwriteCallback(void);
+static enum SaveStatus SaveOverwriteInputCallback(void);
+static enum SaveStatus SaveSavingMessageCallback(void);
+static enum SaveStatus SaveDoSaveCallback(void);
+static enum SaveStatus SaveSuccessCallback(void);
+static enum SaveStatus SaveReturnSuccessCallback(void);
+static enum SaveStatus SaveErrorCallback(void);
+static enum SaveStatus SaveReturnErrorCallback(void);
+static enum SaveStatus BattlePyramidConfirmRetireCallback(void);
+static enum SaveStatus BattlePyramidRetireYesNoCallback(void);
+static enum SaveStatus BattlePyramidRetireInputCallback(void);
 
 // Task callbacks
 static void StartMenuTask(u8 taskId);
@@ -949,7 +949,7 @@ static bool8 SaveErrorTimer(void)
     return FALSE;
 }
 
-static u8 SaveConfirmSaveCallback(void)
+static enum SaveStatus SaveConfirmSaveCallback(void)
 {
     ClearStdWindowAndFrame(GetStartMenuWindowId(), FALSE);
     RemoveStartMenuWindow();
@@ -967,14 +967,14 @@ static u8 SaveConfirmSaveCallback(void)
     return SAVE_IN_PROGRESS;
 }
 
-static u8 SaveYesNoCallback(void)
+static enum SaveStatus SaveYesNoCallback(void)
 {
     DisplayYesNoMenuDefaultYes(); // Show Yes/No menu
     sSaveDialogCallback = SaveConfirmInputCallback;
     return SAVE_IN_PROGRESS;
 }
 
-static u8 SaveConfirmInputCallback(void)
+static enum SaveStatus SaveConfirmInputCallback(void)
 {
     switch (Menu_ProcessInputNoWrapClearOnChoose())
     {
@@ -1006,7 +1006,7 @@ static u8 SaveConfirmInputCallback(void)
 }
 
 // A different save file exists
-static u8 SaveFileExistsCallback(void)
+static enum SaveStatus SaveFileExistsCallback(void)
 {
     if (gDifferentSaveFile == TRUE)
     {
@@ -1020,21 +1020,21 @@ static u8 SaveFileExistsCallback(void)
     return SAVE_IN_PROGRESS;
 }
 
-static u8 SaveConfirmOverwriteDefaultNoCallback(void)
+static enum SaveStatus SaveConfirmOverwriteDefaultNoCallback(void)
 {
     DisplayYesNoMenuWithDefault(1); // Show Yes/No menu (No selected as default)
     sSaveDialogCallback = SaveOverwriteInputCallback;
     return SAVE_IN_PROGRESS;
 }
 
-static u8 SaveConfirmOverwriteCallback(void)
+static enum SaveStatus SaveConfirmOverwriteCallback(void)
 {
     DisplayYesNoMenuDefaultYes(); // Show Yes/No menu
     sSaveDialogCallback = SaveOverwriteInputCallback;
     return SAVE_IN_PROGRESS;
 }
 
-static u8 SaveOverwriteInputCallback(void)
+static enum SaveStatus SaveOverwriteInputCallback(void)
 {
     switch (Menu_ProcessInputNoWrapClearOnChoose())
     {
@@ -1051,15 +1051,15 @@ static u8 SaveOverwriteInputCallback(void)
     return SAVE_IN_PROGRESS;
 }
 
-static u8 SaveSavingMessageCallback(void)
+static enum SaveStatus SaveSavingMessageCallback(void)
 {
     ShowSaveMessage(gText_SavingDontTurnOff, SaveDoSaveCallback);
     return SAVE_IN_PROGRESS;
 }
 
-static u8 SaveDoSaveCallback(void)
+static enum SaveStatus SaveDoSaveCallback(void)
 {
-    u8 saveStatus;
+    enum SaveStatus saveStatus;
 
     IncrementGameStat(GAME_STAT_SAVED_GAME);
     PausePyramidChallenge();
@@ -1083,7 +1083,7 @@ static u8 SaveDoSaveCallback(void)
     return SAVE_IN_PROGRESS;
 }
 
-static u8 SaveSuccessCallback(void)
+static enum SaveStatus SaveSuccessCallback(void)
 {
     if (!IsTextPrinterActive(0))
     {
@@ -1094,7 +1094,7 @@ static u8 SaveSuccessCallback(void)
     return SAVE_IN_PROGRESS;
 }
 
-static u8 SaveReturnSuccessCallback(void)
+static enum SaveStatus SaveReturnSuccessCallback(void)
 {
     if (!IsSEPlaying() && SaveSuccesTimer())
     {
@@ -1107,7 +1107,7 @@ static u8 SaveReturnSuccessCallback(void)
     }
 }
 
-static u8 SaveErrorCallback(void)
+static enum SaveStatus SaveErrorCallback(void)
 {
     if (!IsTextPrinterActive(0))
     {
@@ -1118,7 +1118,7 @@ static u8 SaveErrorCallback(void)
     return SAVE_IN_PROGRESS;
 }
 
-static u8 SaveReturnErrorCallback(void)
+static enum SaveStatus SaveReturnErrorCallback(void)
 {
     if (!SaveErrorTimer())
     {
@@ -1137,7 +1137,7 @@ static void InitBattlePyramidRetire(void)
     sSavingComplete = FALSE;
 }
 
-static u8 BattlePyramidConfirmRetireCallback(void)
+static enum SaveStatus BattlePyramidConfirmRetireCallback(void)
 {
     ClearStdWindowAndFrame(GetStartMenuWindowId(), FALSE);
     RemoveStartMenuWindow();
@@ -1146,7 +1146,7 @@ static u8 BattlePyramidConfirmRetireCallback(void)
     return SAVE_IN_PROGRESS;
 }
 
-static u8 BattlePyramidRetireYesNoCallback(void)
+static enum SaveStatus BattlePyramidRetireYesNoCallback(void)
 {
     DisplayYesNoMenuWithDefault(1); // Show Yes/No menu (No selected as default)
     sSaveDialogCallback = BattlePyramidRetireInputCallback;
@@ -1154,7 +1154,7 @@ static u8 BattlePyramidRetireYesNoCallback(void)
     return SAVE_IN_PROGRESS;
 }
 
-static u8 BattlePyramidRetireInputCallback(void)
+static enum SaveStatus BattlePyramidRetireInputCallback(void)
 {
     switch (Menu_ProcessInputNoWrapClearOnChoose())
     {

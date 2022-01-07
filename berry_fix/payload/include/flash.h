@@ -40,10 +40,13 @@ struct UnkSaveSection
 #define NUM_SECTORS_PER_SAVE_SLOT 14  // Number of sectors occupied by a save slot
 #define FILE_SIGNATURE 0x08012025
 
-#define SAVE_STATUS_EMPTY 0
-#define SAVE_STATUS_OK 1
-#define SAVE_STATUS_NO_FLASH 4
-#define SAVE_STATUS_ERROR 0xFF
+enum SaveStatus {
+    SAVE_STATUS_EMPTY = 0,
+    SAVE_STATUS_OK = 1,
+    SAVE_STATUS_CORRUPT = 2,
+    SAVE_STATUS_NO_FLASH = 4,
+    SAVE_STATUS_ERROR = 0xFF,
+} __attribute__((__packed__));
 
 bool32 flash_maincb_ident_is_valid(void);
 bool8 flash_maincb_read_save(u32);
