@@ -975,7 +975,11 @@ static const u8 sText_BallsCannotBeUsed[] = _("Poké Balls cannot be used\nright
 void ItemUseInBattle_PokeBall(u8 taskId)
 {
     if (FlagGet(FLAG_DISABLE_CATCHING_IN_BATTLE)) {
-        DisplayItemMessage(taskId, 1, sText_BallsCannotBeUsed, BagMenu_InitListsMenu);
+        if (!InBattlePyramid())
+            DisplayItemMessage(taskId, FONT_NORMAL, sText_BallsCannotBeUsed, CloseItemMessage);
+        else
+            DisplayItemMessageInBattlePyramid(taskId, sText_BallsCannotBeUsed, Task_CloseBattlePyramidBagMessage);
+            
         return;
     }
 
