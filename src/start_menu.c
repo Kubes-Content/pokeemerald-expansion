@@ -45,6 +45,7 @@
 #include "constants/songs.h"
 #include "union_room.h"
 #include "constants/rgb.h"
+#include "pokemon_storage_system.h"
 
 // Menu actions
 enum
@@ -53,6 +54,7 @@ enum
     MENU_ACTION_POKEMON,
     MENU_ACTION_BAG,
     MENU_ACTION_POKENAV,
+    MENU_ACTION_PC,
     MENU_ACTION_PLAYER,
     MENU_ACTION_SAVE,
     MENU_ACTION_OPTION,
@@ -93,6 +95,7 @@ EWRAM_DATA static u8 sSaveInfoWindowId = 0;
 static bool8 StartMenuPokedexCallback(void);
 static bool8 StartMenuPokemonCallback(void);
 static bool8 StartMenuBagCallback(void);
+static bool8 StartMenuPcCallback(void);
 static bool8 StartMenuPokeNavCallback(void);
 static bool8 StartMenuPlayerNameCallback(void);
 static bool8 StartMenuSaveCallback(void);
@@ -159,6 +162,7 @@ static const struct MenuAction sStartMenuItems[] =
     {gText_MenuPokemon, {.u8_void = StartMenuPokemonCallback}},
     {gText_MenuBag, {.u8_void = StartMenuBagCallback}},
     {gText_MenuPokenav, {.u8_void = StartMenuPokeNavCallback}},
+    {gText_MenuPc, {.u8_void = StartMenuPcCallback}},
     {gText_MenuPlayer, {.u8_void = StartMenuPlayerNameCallback}},
     {gText_MenuSave, {.u8_void = StartMenuSaveCallback}},
     {gText_MenuOption, {.u8_void = StartMenuOptionCallback}},
@@ -288,26 +292,19 @@ static void AddStartMenuAction(u8 action)
 
 static void BuildNormalStartMenu(void)
 {
-    if (FlagGet(FLAG_SYS_POKEDEX_GET) == TRUE)
-    {
-        AddStartMenuAction(MENU_ACTION_POKEDEX);
-    }
-    if (FlagGet(FLAG_SYS_POKEMON_GET) == TRUE)
-    {
-        AddStartMenuAction(MENU_ACTION_POKEMON);
-    }
+    if (FlagGet(FLAG_SYS_POKEDEX_GET) == TRUE) AddStartMenuAction(MENU_ACTION_POKEDEX);
+    if (FlagGet(FLAG_SYS_POKEMON_GET) == TRUE) AddStartMenuAction(MENU_ACTION_POKEMON);
 
     AddStartMenuAction(MENU_ACTION_BAG);
 
-    if (FlagGet(FLAG_SYS_POKENAV_GET) == TRUE)
-    {
-        AddStartMenuAction(MENU_ACTION_POKENAV);
-    }
+    if (FlagGet(FLAG_SYS_POKENAV_GET) == TRUE) AddStartMenuAction(MENU_ACTION_POKENAV);
+    
+    if (FlagGet(FLAG_SYS_POKEMON_GET) == TRUE) AddStartMenuAction(MENU_ACTION_PC);
 
     AddStartMenuAction(MENU_ACTION_PLAYER);
     AddStartMenuAction(MENU_ACTION_SAVE);
     AddStartMenuAction(MENU_ACTION_OPTION);
-    AddStartMenuAction(MENU_ACTION_EXIT);
+    AddStartMenuAction(MENU_ACTION_EXIT); // TODO: remove? 1/14/2022
 }
 
 static void BuildSafariZoneStartMenu(void)
@@ -655,6 +652,20 @@ static bool8 StartMenuBagCallback(void)
 
     return FALSE;
 }
+
+static bool8 StartMenuPcCallback(void) {
+    u8 taskId;
+    if (!gPaletteFade.active)
+    {
+        PlayRainStoppingSoundEffect();
+        RemoveExtraStartMenuWindows();
+        EnterPokeStorage(0); // TODO: last-box option? save that? 1/14/2022
+        return TRUE;
+    }
+
+    return FALSE;
+}
+
 
 static bool8 StartMenuPokeNavCallback(void)
 {

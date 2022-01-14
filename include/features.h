@@ -13,11 +13,12 @@
 // TODO 1/3/2022 Make it possible for someone to just be like, "Hey grab me like 3 pidgey's... k thx.... now I need some moo milk..."
 // TODO 1/3/2022 Flag?: Shiny encounter rate
 
-// Features & Tweaks
+// Features & Tweaks // this should not contain variable modifications (those belong in the save block)
 //
 //#define FEATURE_RUN_INSIDE_BY_DEFAULT
 #define FEATURE_REUSABLE_TMS
 // TODO 1/2/2022 #define FEATURE_NO_BAG_IN_BATTLE
-#define FEATURE_REMOVE_FIELD_POISON_BELOW_X_HP 5
+// TODO 1/3/2022 #define FEATURE_REMOVE_FIELD_POISON_BELOW_X_HP 5
+// TODO 1/14/2022 #define FEATURE_POKEMON_STORAGE_ACCESSIBLE_FROM_PAUSE_MENU
 
 #endif // GUARD_CONSTANTS_FEATURES_H

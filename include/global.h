@@ -12,6 +12,7 @@
 #include "constants/berry.h"
 #include "constants/maps.h"
 #include "constants/expansion_branches.h"
+#include "gameplay_modifiers.h"
 
 // Prevent cross-jump optimization.
 #define BLOCK_CROSS_JUMP asm("");
@@ -924,14 +925,6 @@ struct ExternalEventFlags
 
 } __attribute__((packed));/*size = 0x15*/
 
-// TODO: move to a new file. 1/7/2022
-struct ExpModifiersData {
-    u32 multiplier;
-} __attribute__((packed));
-
-struct GameplayModifiersData {
-    struct ExpModifiersData exp;
-} __attribute__((packed));
 
 struct SaveBlock1
 {
@@ -1023,7 +1016,7 @@ struct SaveBlock1
     /*0x3???*/ struct WaldaPhrase waldaPhrase;
     // sizeof: 0x3???
 
-    struct GameplayModifiersData modifiersData;
+    /*0x????*/ struct GameplayModifiersData modifiersData;
     // TODO: too tired now.... but need to expand this without breaking it... we need to mirror in berry_fix right?
 };
 
