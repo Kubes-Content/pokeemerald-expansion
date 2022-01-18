@@ -13,3 +13,5 @@ Merged DizzyEggg branches: Rh-hideout
 (Feature) Reusable TMs: Paccy at PokeCommunity
 
 (Feature) Disable catching and/or bag in battle: Ghoulslash
+
+testing done through VBA-M 2.1.4
