@@ -30,7 +30,6 @@ build/
 *.ddump
 .idea/
 porymap.project.cfg
-.vscode/
 .vs/
 *.a
 .fuse_hidden*
